@@ -15,7 +15,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
         android:fontFamily="@font/montserrat_semibold"
-        android:text="QUOTIFY"
+        android:text="@string/quotify"
         android:textAlignment="center"
         android:textColor="#FFF"
         android:textSize="28sp"
@@ -52,7 +52,7 @@
             android:layout_height="wrap_content"
             android:fontFamily="@font/montserrat_semibold"
             android:paddingStart="10dp"
-            android:text="Genius is one percent inspiration and ninety-nine percent perspiration."
+            android:text="@string/genius_is_one_percent_inspiration_and_ninety_nine_percent_perspiration"
             android:textColor="#454545"
             android:textSize="24sp" />
 
@@ -63,11 +63,9 @@
             android:layout_marginTop="16dp"
             android:fontFamily="@font/montserrat_medium"
             android:paddingStart="10dp"
-            android:text="Bruce Wayne"
+            android:text="@string/bruce_wayne"
             android:textColor="#454545"
             android:textSize="20sp" />
-
-
     </LinearLayout>
 
     <LinearLayout
@@ -82,24 +80,24 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:drawableStart="@drawable/ic_left_arrow"
-            android:drawableTint="#80FFFFFF"
-            android:text="PREVIOUS"
+            android:text="@string/previous"
             android:onClick="onPrevious"
             android:textColor="#80FFFFFF"
-            android:textSize="18sp"></TextView>
+            android:textSize="18sp"
+            app:drawableTint="#80FFFFFF"
+            app:drawableStartCompat="@drawable/ic_left_arrow" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:drawableEnd="@drawable/ic_arrow"
-            android:drawableTint="#80FFFFFF"
-            android:text="NEXT"
+            android:text="@string/next"
             android:onClick="onNext"
             android:textAlignment="textEnd"
             android:textColor="#80FFFFFF"
-            android:textSize="18sp"></TextView>
+            android:textSize="18sp"
+            app:drawableEndCompat="@drawable/ic_arrow"
+            app:drawableTint="#80FFFFFF" />
     </LinearLayout>
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
@@ -107,14 +105,15 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:clickable="true"
-        android:layout_marginRight="24dp"
+        android:layout_marginEnd="24dp"
         app:backgroundTint="#454545"
         android:onClick="onShare"
         android:foregroundTint="#FFF"
         app:layout_constraintBottom_toBottomOf="@+id/linearLayout"
         app:layout_constraintEnd_toEndOf="@+id/linearLayout"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout"
-        app:srcCompat="@drawable/ic_share" />
+        app:srcCompat="@drawable/ic_share"
+        android:contentDescription="TODO" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

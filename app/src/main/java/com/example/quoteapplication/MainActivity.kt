@@ -8,4 +8,8 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
     }
+
+    fun onPrevious(view: android.view.View) {}
+    fun onNext(view: android.view.View) {}
+    fun onShare(view: android.view.View) {}
 }
