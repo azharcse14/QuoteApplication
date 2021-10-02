@@ -1,10 +1,11 @@
 package com.example.quoteapplication
 
+import android.content.Context
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 
-class MainViewModelFactory:ViewModelProvider.Factory {
+class MainViewModelFactory(val context: Context):ViewModelProvider.Factory {
     override fun <T : ViewModel?> create(modelClass: Class<T>): T {
-        return MainViewModel() as T
+        return MainViewModel(context) as T
     }
 }
