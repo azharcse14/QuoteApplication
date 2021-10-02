@@ -80,24 +80,26 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="@string/previous"
             android:onClick="onPrevious"
+            android:text="@string/previous"
             android:textColor="#80FFFFFF"
             android:textSize="18sp"
+            app:drawableStartCompat="@drawable/ic_left_arrow"
             app:drawableTint="#80FFFFFF"
-            app:drawableStartCompat="@drawable/ic_left_arrow" />
+            tools:ignore="TouchTargetSizeCheck" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="@string/next"
             android:onClick="onNext"
+            android:text="@string/next"
             android:textAlignment="textEnd"
             android:textColor="#80FFFFFF"
             android:textSize="18sp"
             app:drawableEndCompat="@drawable/ic_arrow"
-            app:drawableTint="#80FFFFFF" />
+            app:drawableTint="#80FFFFFF"
+            tools:ignore="TouchTargetSizeCheck" />
     </LinearLayout>
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
