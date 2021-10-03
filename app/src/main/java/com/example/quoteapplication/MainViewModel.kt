@@ -22,6 +22,10 @@ class MainViewModel(val context:Context):ViewModel() {
         val json = String(buffer, Charsets.UTF_8)
         val gson = Gson()
         return gson.fromJson(json,Array<Quote>::class.java)
-
     }
+
+    fun getQuote()= quoteList[index]
+    fun nextQuote()= quoteList[++index]
+    fun previousQuote()= quoteList[--index]
+
 }
