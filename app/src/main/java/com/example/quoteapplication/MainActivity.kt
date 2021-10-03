@@ -1,5 +1,6 @@
 package com.example.quoteapplication
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.TextView
@@ -35,6 +36,9 @@ class MainActivity : AppCompatActivity() {
         setQuote(mainViewModel.nextQuote())
     }
     fun onShare(view: android.view.View) {
-        
+        val intent = Intent(Intent.ACTION_SEND)
+        intent.setType("text/plain")
+        intent.putExtra(Intent.EXTRA_TEXT, mainViewModel.getQuote().text)
+        startActivity(intent)
     }
 }
